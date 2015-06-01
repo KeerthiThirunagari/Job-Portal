@@ -1,0 +1,12 @@
+#resume-table{
+	border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #bbb;
+    overflow-x: auto;
+	display: block;
+	
+}
+td {
+    border-top: 1px solid #ddd;
+    padding: 4px 8px;
+}

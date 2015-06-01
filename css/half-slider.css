@@ -1,0 +1,384 @@
+/*!
+ * Start Bootstrap - Half Slider HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+html,
+body {
+    height: 100%;
+}
+
+/* You can change the height of the carousel by changing the height in the class below. It is set to 50% by default, but can be any height! */
+
+.carousel {
+    height: 50%;
+}
+
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+footer {
+    margin: 50px 0;
+}
+/*guest-landing-page css starts*/
+.guest-landing-header, #bannerDivId{
+	background-repeat:no-repeat;
+	background-position:center top;
+	background-color:#f2f2f2;
+	height:100px;
+	margin-bottom:20px;
+	position:relative;
+	transition:all 0.5s ease;
+}
+.landing-top-comp-link{
+	position: absolute;
+	right:0;
+	top:10px;
+	color:#2a2a2a;
+	color:rgba(0, 0, 0, 0.7);
+	font-family:'Roboto_Bold', Arial, Helvetica, sans-serif;
+	font-size:16px;
+	text-decoration:none;
+	text-shadow: 0px 1px 5px rgba(255, 255, 255, 0.4);
+/*	display:none;*/
+}
+.landing-top-comp-link:hover{color:#2a2a2a; color:rgba(0, 0, 0, 0.7); text-decoration:underline;}
+
+.header-bg-tabs{position:absolute; top:-20px; left:0; right:0; width:950px; margin:auto;}
+.header-bg-tabs ul{position:absolute; top:0; right:0; list-style:none;}
+.header-bg-tabs ul li{float:left; width:12px; height:12px; border-radius:6px; margin-left:5px; background:#cc4237; overflow:hidden; text-indent:-9999px; cursor:pointer;} 
+.header-bg-tabs ul li.active{background:#e4e5e4; cursor:default;} 
+.guest-landing-srch{
+	max-width: 1366px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.4);
+	text-align: center;
+	padding: 10px 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index:100;
+	
+}
+
+.guest-landing-srch {}
+
+.guest-landing-srch {}
+.guest-landing-srch input[type="text"]{
+	margin-right: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 326px;
+	height: 50px;
+	font-size: 16px;
+	font-family: 'Roboto_Regular', Arial, Helvetica, sans-serif;
+	background-color:#fff;
+	color:#7d7d7d;
+}
+.guest-landing-srch input[type="text"].location-srch{ width:230px;}
+.guest-landing-srch select{
+	margin-right: 10px;
+	padding:13px 10px 13px 17px;
+	/*padding-left: 20px;
+	padding-right: 10px;*/
+	width: 150px;
+	height: 50px;
+	font-size: 16px;
+	font-family: 'Roboto_Regular', Arial, Helvetica, sans-serif;
+	color:#7d7d7d;
+	line-height: 43px;
+	visibility:visible !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+/* Safari only override */
+::i-block-chrome,.guest-landing-srch select {
+	text-indent:17px;
+}}
+
+.guest-landing-srch select option{ color:#000;}
+.guest-landing-srch select option[value="-1"]{ color:#7d7d7d;}
+.guest-landing-srch .suggestionList{top: 50px !important;}
+
+.guest-landing-srch h1{color:#fff; margin-bottom:12px;}
+.home-srchptext{color:#fff; margin-top:10px;}
+
+.guest-landing-srch .dflt-msg{margin:10px 0;}
+
+.tj-header-landing{
+	height: 63px;
+	position: relative;
+}
+
+.guest-landing h2.hiring-comp-hd{margin-bottom:10px; margin-top:10px;}
+
+.grey-bdr-ul{
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: rgba(250,250,250,0);
+	border: solid 1px #dcdcdc;
+	list-style:none;
+}
+
+.popu-cate{ text-align:center; padding:20px 50px;}
+.popu-cate ul.grey-bdr-ul{ 
+	float:left; 
+	font-size:16px; 
+	text-align:center;
+	font-family: 'Roboto_Regular', Arial, Helvetica, sans-serif;
+}
+.popu-cate ul.grey-bdr-ul li{ padding:7px 10px; float:left;}
+.popu-cate ul.grey-bdr-ul li.heading{ padding:14px 10px;}
+.popu-cate ul.grey-bdr-ul .data-num{ 
+	font-family: 'Roboto_Bold', Arial, Helvetica, sans-serif;
+	font-size:20px;
+	border-right:1px solid #dcdcdc;
+	border-left:1px solid #dcdcdc;
+	padding:13px 10px;
+}
+.popu-cate a.button{ display:block;}
+
+.diversified-jobs a{
+	font-size: 14px;
+	text-align: left;
+	font-family: 'Roboto_Bold', Arial, Helvetica, sans-serif;
+	color:#CD4237;
+}
+.diversified-jobs li{
+	float: left;
+	width: 226px;
+	padding:10px;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	text-align:left;
+}
+.diversified-jobs li:nth-child(2n+2){margin-right:0;}
+
+.trndin-up-skl{padding:20px 50px; border-top:1px solid #f3f3f3;}
+.diversified-jobs .data-num{
+	font-family: 'Roboto_Bold', Arial, Helvetica, sans-serif; 
+/*	border-right:1px solid #dcdcdc;
+	border-left:1px solid #dcdcdc;*/
+	float:left;
+/*	padding: 10px 5px;*/
+	margin-left: 5px;
+}
+.diversified-jobs .vrsfd-heading{float:left;}
+.popu-cate .diversified-jobs .button{display:inline-block; float:right; margin-top:6px;}
+
+.trndin-up-skl h4{margin-bottom:10px;}
+/*.trndin-up-skl .tag3{margin-right:5px;}*/
+.landin-cate{margin-bottom:20px; position:relative; min-height: 100px;}
+.landin-cate .job-list{ 
+	background:#f2f2f2;
+	border-top:1px solid #ececec;
+	border-radius:0 0 5px 5px;
+	padding:20px 10px;
+}
+.landin-cate .job-list button{ float:right; width:190px;}
+.landin-cate .blue-header h2{float:left;}
+.landin-cate .blue-header .header-cntr{ margin-top:5px;}
+
+.job-list-bx{
+	width:558px;
+	position:relative;
+	float:left;
+	margin-left:10px;
+}
+.job-list-bx ul{overflow:hidden;}
+.job-list-bx li{
+	float:left;
+	list-style:none;
+	padding:0 20px;
+	width:144px;
+	border-right: 1px solid #BEBEBE;
+	/*css to fix li height*/
+	padding-bottom: 100px;
+	margin-bottom: -100px;
+}
+.job-list-bx li .comp-name{ display:block; margin:2px 0;}
+.job-list-bx li a{display:block;}
+.job-list-bx .prev{top:10px; left:-10px;}
+.job-list-bx .next{top:10px; right:-10px;}
+.job-list-bx li:nth-child(3){border-right:none;}
+
+.top-ind-tab{ position: relative;}
+.top-ind-tab .prev{top:0; left:0;}
+.top-ind-tab .next{top:0; right:0;}
+/*.top-ind-tab .tj-tab{padding:0 20px;}*/
+
+.top-ind-tab .tj-tab li{margin-right:25px;}
+/*.top-ind-tab .tj-tab li:first-child{padding-left:0;}
+.top-ind-tab .tj-tab li:nth-child(n+5){display:none;}*/
+.top-ind-tab .tj-tab li:last-child{ margin-right:0; padding-right:6px;}
+a.all-func-link{float:right; font-size:14px; margin-top:10px;}
+
+/*featured-companies starts*/
+.hiring-comp-blk{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #fff;
+	border: solid 1px #ececec;
+	padding:15px 0 0 0;
+}
+
+.hiring-now{padding-left: 15px;}
+.hiring-now ul{list-style:none;}
+.hiring-now ul li{ float:left; margin-right:15px; margin-bottom:15px;}
+.hiring-now ul li > a {
+	display: block;
+	width: 99px;
+	height: 38px;
+	background: url(/images_cand/tj_images/home/loader.gif) no-repeat 50%;
+	border: 1px solid #ccc;
+}
+
+.vwJobs {
+	border-top: 1px solid #CCC;
+	padding: 5px 0 0 !important;
+	margin: 10px 0 0;
+}
+
+.tipLst .tip{display:inline-block; position:absolute; z-index:999;  display:none; left:0; top:30px; padding-top:7px;}
+.tipLst .tip .spanTip{display:inline-block; border:1px solid #cbb277; padding:5px; color:#555; width:160px; background:#ffffdf;}
+.tipLst .tip .bTip{position:absolute; border:0; left:0px; top:-2px}
+.tip .spanTip a{background:none; height:auto; width:auto !important;}
+
+.featured-employee{ padding-top:15px; padding-left: 15px; border-top:1px solid #ececec;}
+.featured-employee ul{ list-style:none;}
+.featured-employee ul li{float:left; margin-right:10px; margin-bottom:15px;}
+.featured-employee ul li a{
+	display: block;
+	width:176px;
+	height:12px;
+	font-family: 'Roboto_Regular', Arial, Helvetica, sans-serif;
+	color:#cd4237;
+}
+
+.fTip{position:absolute; left:-9px}
+.fTipBlk{ background:#fffedf; border:1px solid #cbb377;  padding:10px; color:#787878; font-size:12px; display:block }
+.fSpanBlk{position:absolute; top:-14px; _top:0; left:100px; width:125px; display:none;}
+.posrel {position: relative;}
+/*featured-companies ends*/
+
+.top-comp-home { padding:20px 20px 0 40px; /*height: 518px;*/ height: 380px; position:relative;}
+.top-comp-home header{margin-bottom:5px;}
+.top-comp-home ul{list-style:none;}
+.top-comp-home ul li.top-comp-li{ float:left; margin-right:20px; width: 227px; margin: 0 20px 20px 0; /*height:218px;*/ height:150px;}
+.top-comp-home ul li h4{ float:left; font-family: 'Roboto_Regular', Arial, Helvetica, sans-serif; width:170px; font-weight:400;}
+.top-comp-home .pot-emp-follow{margin-top:3px; float:right;}
+.top-comp-follow{float:right; margin-top: 3px;}
+.top-comp-info{ 
+	margin-bottom:10px; 
+	border: solid 1px #ECECEC;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding:10px;
+	background-color: #FFF;
+}
+.top-comp-logo{
+    width: 94px;
+	height: 64px;
+	background-image: url(/images_cand/tj_images/personlisation/comp-icon.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	float: left;
+	margin-right: 10px;
+	text-align: center;
+	position: relative;
+}
+.top-comp-logo img{
+	max-width:94px; 
+	max-height:64px; 
+	position:absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius:5px;
+}
+.top-comp-info ul{float:left; font-size:14px; margin-top:5px;}
+.top-comp-info li{margin-bottom:5px;}
+.top-comp-info li a{color:#cd4237; font-family: 'Roboto_Regular', Arial, Helvetica, sans-serif;}
+
+.top-comp-update{display:none;}
+.top-comp-update h5{margin-bottom:10px;  font-family: 'Roboto_Bold', Arial, Helvetica, sans-serif;}
+.top-comp-update p{line-height:17px; font-family: 'Roboto_Regular', Arial, Helvetica, sans-serif; margin-bottom:10px;}
+
+/*.paidTjTopComp .top-comp-home > ul > li.top-comp-li:nth-child(n+5){ display:none;}*/
+.top-comp-home .paid-inventory{display:none;}
+.paidTjTopComp .top-comp-home .paid-inventory{display:block;}
+
+.enhance-career h4{ margin:10px 10px 0; font-size:14px;}
+.enhance-career .tag3{margin:0 3px 8px 0;}
+.trndin-up-rhs{padding:10px; border-bottom:1px solid #ececec;}
+.trndin-up-rhs:last-child{border-bottom:none;}
+.view-all-cources{display:block; margin:10px 0 0;}
+
+.walk-in-zone h4{ margin:10px 10px 5px; font-size:14px;}
+.walk-in-zone .grey-text{display:block; margin-top:5px;}
+.walk-in-zone a.red-link{font-size:14px;}
+.walk-in-blk{padding:10px; border-bottom:1px solid #ececec;}
+.walk-in-blk:last-child{border-bottom:none;}
+
+/*banner starts*/
+.home-banner{}
+.banner-left{width:300px; float:left; margin-top:20px;}
+.banner-right{width:300px; float:right;}
+
+/*slider css starts*/
+.landing-header{width:100%; background:#F2F2F2; position:relative; margin-bottom:20px;}
+.lnding-slider{ width:100%; max-width:1366px; margin:auto; height:280px; background:url(/images_cand/tj_images/personlisation/loader.gif) no-repeat center 100px;}
+.lnding-slider ul.slides > li{ width:100%; max-width:1366px; height:280px; background-position:center top; background-repeat:no-repeat; position:relative; display:none;}
+/*.lnding-slider ul.slides > li:first-child{display:block;}*/
+
+.homepage-rhs-banner{display:none; margin-bottom:20px;}
+/*guest-landing-page css ends*/
+
+/*css for gulf starts*/
+.gulf-header .guest-landing-srch{padding:10px 0 15px 0;}
+.gulf-landing .hiring-comp-blk{margin-bottom:20px;}
+.gulf-landing .hiring-now ul li a { position:relative; background-image:none;}
+.gulf-landing .hiring-now ul li img {
+	max-width: 99px;
+	max-height: 38px;
+	position: absolute;
+	left: 0; right: 0; top: 0; bottom: 0;
+	margin: auto;
+}
+.gulf-loc ul{margin-left:40px;}
+.gulf-loc ul li{
+	width:120px;
+	height:90px;
+	float:left;
+	text-align:center;
+	padding:20px 10px;
+	margin:20px 0 0 20px;
+}
+.gulf-loc ul li a{color:#cd4237; display:block; margin-bottom:5px; font-size:14px;}
+.gulf-loc ul li .gulf-loc-jobs{font-size:20px; display:block;}
+.gulf-loc ul li img{ width:72px; height:42px; border:1px solid #ebebeb;}
+.gulf-loc .white-bx{padding-bottom:20px;}
+/*css for gulf ends*/

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/half-slider.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Half Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill"><img src="images/2.jpg" height="100%" width="100%"></div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill"><img src="images/3.jpg" height="100%" width="100%"></div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill"><img src="images/4.jpg" height="100%" width="100%"></div>
+            </div>
+            <div class="item">
+                <!-- Set the fourth background image using inline CSS below. -->
+                <div class="fill"><img src="images/5.jpg" height="100%" width="100%"></div>
+            </div>
+        <div class="guest-landing-srch">
+        <section class="wrap">
+        <h1>Everything About Your Career at One Place Now</h1>
+
+        <div id="errorMsgDiv" class="error-msg dflt-msg" style="display:none">Please provide inputs for at least one field</div>
+        <form id="quickSearchBean"  name="quickSearchBean" method="get" action="/candidate/mysearch-result.html" onsubmit="return validateSearchForm(this);">
+        <input name="searchType" value="personalizedSearch" type="hidden">
+        <input name="from" value="submit" type="hidden">
+        <div class="auto-suggest-blk">
+        <input id="txtKeywords" name="txtKeywords" type="text" value="Enter Skills, Designation, etc" autocomplete="off">
+        <div id="autoSuggestList" style="display: none; width: 324px;"><ul></ul></div><iframe id="FrameautoSuggestList" frameborder="0"></iframe>
+        <div id="autoSuggestList2ndKeywordsListSFB" class="suggestionList srch-suggest" style="display: none; width: 324px;">
+        <h5>Suggested Keywords</h5>
+        <ul></ul></div>
+        </div>
+        <div class="auto-suggest-blk">
+        <input id="txtLocation" name="txtLocation" type="text" class="location-srch" value="Enter Location" autocomplete="off"><div id="autoSuggestLocation" style="display: none; width: 228px;"><ul></ul></div><iframe id="FrameautoSuggestLocation" style="display:none" frameborder="0"></iframe></div>
+        <select id="cboWorkExp1" name="cboWorkExp1">
+        <option value="-1">Experience</option>
+        <option value="0">Entry Level</option>
+        <option value="1">1 year</option>
+        <option value="2">2 years</option>
+        <option value="3">3 years</option>
+        <option value="4">4 years</option>
+        <option value="5">5 years</option>
+        <option value="6">6 years</option>
+        <option value="7">7 years</option>
+        <option value="8">8 years</option>
+        <option value="9">9 years</option>
+        <option value="10">10 years</option>
+        <option value="11">11 years</option>
+        <option value="12">12 years</option>
+        <option value="13">13 years</option>
+        <option value="14">14 years</option>
+        <option value="15">15 years</option>
+        <option value="16">16 years</option>
+        <option value="17">17 years</option>
+        <option value="18">18 years</option>
+        <option value="19">19 years</option>
+        <option value="20">20 years</option>
+        <option value="21">20+ years</option>
+        </select>
+        <button class="big-btn" value="Search" onclick="javascript:setAClickOnSearch();">Search</button>
+        </form>
+
+        <h4 class="home-srchptext">Start Your Job Search With 250,000+ Jobs from All Over the Web</h4>
+        </section>
+        </div>
+        </div>
+    </header>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 3000 //changes the speed
+    })
+    </script>
+    <script type="text/javascript" src="js/one.js"></script>
+    <script type="text/javascript" src="js/two.js"></script>
+    <script>function setAClickOnSearch(){var reg=new RegExp("login.html","i");if(reg.test(window.top.location))aClick=true;}
+function removeFirstOption(obj){var oOption=obj.options[0];if(oOption.value=="-1"){obj.options[0].style.display='none';}}
+function validateSearchForm(form){if(publish=="DN")return false;var defText={"txtLocation":"Enter Location","txtKeywords":"Enter Skills, Designation, etc","cboWorkExp1":"-1"};var flag=false;for(var i in defText){flag=flag|chkDefaultVal(i,defText[i]);}
+if(!flag){jQuery("#errorMsgDiv").show();jQuery("#quickSearchBean input, #quickSearchBean select").addClass('frm-err');return false;}else{for(var i in defText){resetDefault(i,defText[i]);}
+return true;}
+return false;}
+function chkDefaultVal(inputId,existingText){flag=false;var val=jQuery("#"+inputId).val();if(val!=null&&jQuery.trim(val)!=''&&val!='undefined'&&val!=existingText){flag=true;}
+return flag;}
+function resetDefault(inputId,existingText){flag=false;var val=jQuery("#"+inputId).val();if(val==existingText){jQuery("#"+inputId).val("");}}</script>
+    <script type="text/javascript">var autoS=new AutoSuggest('autoSuggestList','FrameautoSuggestList',document.forms.quickSearchBean.txtKeywords,'y',"ks","0,1,2,3",'','','personalized-search');var autoSLocation=new AutoSuggest('autoSuggestLocation','FrameautoSuggestLocation',document.forms.quickSearchBean.txtLocation,'y',"ls","0,1,2,3",'');</script>
+    <script>jQuery.fn.DefaultInputValue=function(){return jQuery(this).each(function(){var Input=jQuery(this);var default_value=Input.val();Input.focus(function(){if(Input.val()=='Enter Location'||Input.val()=='Enter Skills, Designation, etc'){Input.val("").css('color','#000').removeClass("frm-err");};}).blur(function(){if(Input.val().length==0){var id=jQuery(this).attr('id');if(id=='txtLocation'){default_value="Enter Location";}
+if(id=='txtKeywords'){default_value="Enter Skills, Designation, etc";}
+Input.val(default_value).css('color','#7d7d7d');};});});}
+jQuery('.inside-srch input[type="text"]').DefaultInputValue();jQuery('.guest-landing-srch input[type="text"]').DefaultInputValue();jQuery(".inside-srch select, .guest-landing-srch select").change(function(){jQuery("select option").css("color","#000");jQuery("select").css("color","#000");if($(this).val()=="-1"){$(this).css("color","#7d7d7d");$(this).find('option[value="-1"]').css("color","#7d7d7d");}});jQuery('.auto-suggest-blk').each(function(){var AutSustInptWth=jQuery(this).children('input').innerWidth();jQuery(this).children('div').css({width:''+AutSustInptWth+''});});function trackTheClickEvent(category,action){_gaq.push(['_trackEvent',category,action]);}
+var ssCounterSFB=0;function openSecondSuggestionSFB(theSelectedSuggestionText){if(ssCounterSFB<5){ajaxController.getSuggestedSkillList(theSelectedSuggestionText,"","SKILL",8,true,cb_openSecondSuggestionSFB);}else{console.log("CAND-131 Not showing 2nd suggestion.");}}
+function cb_openSecondSuggestionSFB(result){var splitData=(""+result).split(",");var li_data="";var dataLength=splitData.length;if(dataLength>1){for(i=0;i<dataLength;i++){var hyperlink="javascript:secondSelectionClickedSFB('"+encodeURI(splitData[i])+"');";li_data+="<li><a href="+hyperlink+">"+splitData[i]+"</a></li>";}
+jQuery("#autoSuggestList2ndKeywordsListSFB ul").html(li_data);jQuery("#autoSuggestList2ndKeywordsListSFB").show();}}
+function secondSelectionClickedSFB(that){_gaq.push(['_trackEvent','Click2Ad','tj_skillsuggestion']);jQuery("#autoSuggestList2ndKeywordsListSFB").hide();var text=jQuery("#txtKeywords").val();if(-1==text.indexOf(that)){jQuery("#txtKeywords").val(text+","+that);}
+openSecondSuggestionSFB(that);}</script>
+</body>
+
+</html>

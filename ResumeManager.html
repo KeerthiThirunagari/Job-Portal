@@ -1,0 +1,92 @@
+<?php
+if (isset($_POST['submitted'])){
+    print_r($_POST);
+}
+?>
+<html>
+<head>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/half-slider.css" rel="stylesheet">
+    <link href="css/new.css" rel="stylesheet">
+	<script type="text/javascript">
+        function addInput(){
+            var div = document.getElementById('div_quotes');
+            div.innerHTML += "<input name='new_quote[]'>";
+            div.innerHTML += "<br>";
+        }
+        function addInput2(){
+            var div = document.getElementById('div_quotes2');
+            div.innerHTML += "<input name='new_quote[]'>";
+            div.innerHTML += "<input name='new_quote[]'>";
+            div.innerHTML += "<input name='new_quote[]'>";
+            div.innerHTML += "\n<br>";
+        }
+        function addInput3(){
+            var div = document.getElementById('div_quotes3');
+            div.innerHTML += "<input name='new_quote[]'>";
+            div.innerHTML += "<input name='new_quote[]'>";
+            div.innerHTML += "\n<br>";
+        }
+        /*var employment=document.getElementById('employment').value;
+        if(employment=='experienced')
+        {
+            function addInput3(){
+            var div = document.getElementById('div_quotes3');
+            div.innerHTML += "<input name='new_quote[]'>";
+            div.innerHTML += "<br>";
+            }
+        }
+        else if(employment=='fresher')
+        {
+            continue;
+        }*/
+
+    </script>
+    <h1 id="head" style="text-align:center"> Resume Manager </h1>
+</head>
+<title>
+	Resume Manager
+</title>
+<body>
+<br>
+<form method="post">
+
+<div class="container-fluid">
+<table class="table table-hover" id="resume-table">
+    <tr>
+        <td class="required">Resume Headline:</td>
+        <td> <input class="input-primary" type="text"></td>
+    </tr>
+    <tr>
+        <td> Career Objective:</td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td class="required">Skills:</td>
+        <td><input type="text"><small>*Atleast three skills are a must.</small><div id="div_quotes"></div><input type="button" class="btn btn-default" value="+ Add more" onClick="addInput();"></td>
+    </tr>
+    <tr>
+        <td class="required">Qualification:</td>
+        <td><div><form class="form-inline"><span name="borderele" class=""><select name="UGCOURSE" id="ugcourse" style="width:180px;" class=""><option value="-1" label="Select">Select Degree</option><option value="1" label="Not Pursuing Graduation">Not Pursuing Graduation</option><option value="2" label="B.A">B.A</option><option value="3" label="B.Arch">B.Arch</option><option value="4" label="BCA">BCA</option><option value="5" label="B.B.A">B.B.A</option><option value="6" label="B.Com">B.Com</option><option value="7" label="B.Ed">B.Ed</option><option value="8" label="BDS">BDS</option><option value="9" label="BHM">BHM</option><option value="10" label="B.Pharma">B.Pharma</option><option value="11" label="B.Sc">B.Sc</option><option value="12" label="B.Tech/B.E.">B.Tech/B.E.</option><option value="13" label="LLB">LLB</option><option value="14" label="MBBS">MBBS</option><option value="15" label="Diploma">Diploma</option><option value="16" label="BVSC">BVSC</option><option value="9999" label="Other">Other</option></select></span><input type="text" placeholder="Institution"><input type="number" placeholder="CGPA"></form></div><div id="div_quotes2"></div><input type="button" class="btn btn-default" value="+ Add more" onClick="addInput2();"></td>
+    </tr>
+    <tr>
+        <td>Employment Details:</td>
+        <td><div id="employment"><input type="radio" name="status" value="fresher" checked>Fresher<br><input type="radio" name="status" value="experienced">Experienced</div></td>
+    </tr>
+    <tr>
+        <td>Project Details:</td>
+        <td><form class="form-inline"><input type="text" placeholder="Project Name"><input type="text" placeholder="Institution"></form><div id="div_quotes3"></div><input type="button" class="btn btn-default" value="+ Add more" onClick="addInput3();"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" class="btn btn-default" value="Submit Resume" name="submitted"></td>
+    </tr>
+
+</table>
+</div>
+</form>
+<style>.required:after {content:" *";color:#e32;display:inline;}</style>
+</body>
+</html>
